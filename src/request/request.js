@@ -4,7 +4,7 @@ import axios from 'axios'
 var CryptoJS= require("@/assets/js/crypto-js");
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-var httpUrl="http://223.99.203.122:7320";
+var httpUrl="http://";
 
 // 基础参数
 var baseParams={};
@@ -13,7 +13,7 @@ var baseParams={};
 // token加密
 function Token(){
 	var t = new Date().getTime();
-	var k = "8WhOAm1O2NTfMQmF3iaJWekrJPpgt8VI";
+	var k = "";
 	var enStr = CryptoJS.CryptoJS.AES.encrypt(CryptoJS.CryptoJS.enc.Utf8.parse(t.toString()), CryptoJS.CryptoJS.enc.Utf8.parse(k), {
 	    mode: CryptoJS.CryptoJS.mode.ECB,
 	    padding: CryptoJS.CryptoJS.pad.Pkcs7
